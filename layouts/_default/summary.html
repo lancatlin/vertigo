@@ -1,0 +1,20 @@
+<article>
+    <div class="title">
+        <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+        <div>
+            <a href="{{with .Site.GetPage "section" .Section}}{{.RelPermalink}}{{end}}">{{ .Section }}</a>
+            &emsp;
+            <time datetime="{{ .Date.Format "2006-01-02T15:04:05" }}">{{ .Params.ChineseDate }}</time>
+        </div>
+    </div>
+    {{ range .Params.tags }}
+    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+    {{ end }}
+    <div>
+        <p>{{ .Summary }}
+        {{ if .Truncated }}
+        ……
+        {{ end }}
+        <a href="{{ .RelPermalink }}">閱讀更多</a></p>
+    </div>
+</article>

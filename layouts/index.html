@@ -1,0 +1,10 @@
+{{ define "main" }}
+	<main>
+        {{ $pages := where site.RegularPages.ByWeight "Type" "in" site.Params.mainSections }}
+		{{ range $pages }}
+			{{ .Render "summary" }}
+		{{ end }}
+		{{ partial "pagination.html" . }}
+	</main>
+{{ partial "sidebar.html" . }}
+{{ end }}

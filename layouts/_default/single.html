@@ -1,0 +1,28 @@
+{{ define "main" }}
+	<main>
+		<article>
+            <div class="title">
+                <h1>{{ .Title }}</h1>
+                <div>
+                    <a href="..">{{ .Section }}</a>
+                    &emsp;
+                    <time datetime="{{ .Date.Format "2006-01-02T15:04:05" }}">{{ .Params.ChineseDate }}</time>
+                </div>
+            </div>
+            <br>
+            <div>
+                {{ .Content }}
+            </div>
+            {{ with .Params.tags }}
+            <div>
+                <ul id="tags">
+                    {{ range . }}
+                    <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+                    {{ end }}
+                </ul>
+            </div>
+            {{ end }}
+        </article>
+    </main>
+    {{ partial "sidebar.html" . }}
+    {{ end }}

@@ -1,0 +1,17 @@
+<header>
+	<nav>
+        <h3><a href="{{ .Site.BaseURL | relURL }}">{{ .Site.Title }}</a></h3>
+		<ul class="navbar">
+            {{ with .Site.Sections }}
+			{{ range . }}
+			<li><a href="{{ .RelPermalink }}">{{ .Name }}</a></li>
+			{{ end }}
+            {{ end }}
+            {{ with .Site.Menus.main }}
+			{{ range . }}
+			<li><a href="{{ .URL }}">{{ .Name }}</a></li>
+			{{ end }}
+            {{ end }}
+		</ul>
+	</nav>
+</header>

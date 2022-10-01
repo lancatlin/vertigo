@@ -1,0 +1,13 @@
+name = "vertigo"
+license = "MIT"
+licenselink = "https://github.com/lancatlin/vertigo/blob/master/LICENSE"
+description = "中文直排網站主題"
+homepage = "https://github.com/lancatlin/vertigo/"
+demosite = "https://zeko.ink/"
+tags = ["blog"]
+features = ["blog"]
+min_version = "0.20"
+
+[author]
+  name = "Wancat"
+  homepage = "https://github.com/lancatlin"

@@ -1,0 +1,85 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 80%;
+    padding: 15px 100px;
+    margin: auto;
+}
+
+* {
+    font-family: "Noto Serif CJK TC", "STSongTi-TC", "PMingLiU", "Noto Serif TC", serif;
+    writing-mode: vertical-rl;
+    letter-spacing: 0.15em;
+}
+
+blockquote * {
+    font-family: "TW-Kai", "DFKai-SB", "STKaiti", "cwTeXKai", cursive;
+    color: #333;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navbar li {
+    display: inline;
+    margin: 5px;
+}
+
+article p {
+    margin: 0;
+    text-indent: 2.3em;
+    letter-spacing: 0.15em;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+    color: grey;
+}
+
+.meta {
+    text-align: right;
+    margin-left: 1em;
+}
+
+.meta * {
+    margin: 10px;
+}
+
+figure {
+    height: 100%;
+    display: flex;
+    margin: 15px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+figure img {
+    height: 80%;
+}
+
+figcaption p {
+    text-indent: 0;
+    font-size: 0.8em;
+    color: #444;
+    writing-mode: horizontal-tb;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.title * {
+    display: inline;
+}
